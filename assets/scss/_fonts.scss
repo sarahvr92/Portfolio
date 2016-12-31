@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Neuzeit Grotesk';
+  src: url('assets/fonts/neuzegrotreg-webfont.eot');
+  src: url('assets/fonts/neuzegrotreg-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/neuzegrotreg-webfont.woff2') format('woff2'),
+  url('assets/fonts/neuzegrotreg-webfont.woff') format('woff'),
+  url('assets/fonts/neuzegrotreg-webfont.ttf') format('truetype'),
+  url('assets/fonts/neuzegrotreg-webfont.svg#neuzeit_grotesk_tregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neuzeit Grotesk';
+  src: url('../fonts/neuzegrotbol-webfont.eot');
+  src: url('../fonts/neuzegrotbol-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/neuzegrotbol-webfont.woff2') format('woff2'),
+  url('../fonts/neuzegrotbol-webfont.woff') format('woff'),
+  url('../fonts/neuzegrotbol-webfont.ttf') format('truetype'),
+  url('../fonts/neuzegrotbol-webfont.svg#neuzeit_grotesk_tbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neuzeit Grotesk';
+  src: url('../fonts/neuzegrotbla-webfont.eot');
+  src: url('../fonts/neuzegrotbla-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/neuzegrotbla-webfont.woff2') format('woff2'),
+  url('../fonts/neuzegrotbla-webfont.woff') format('woff'),
+  url('../fonts/neuzegrotbla-webfont.ttf') format('truetype'),
+  url('../fonts/neuzegrotbla-webfont.svg#neuzeit_grotesk_tblack') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}

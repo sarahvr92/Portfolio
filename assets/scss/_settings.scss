@@ -1,20 +1,12 @@
-//  Foundation for Sites Settings
-//  -----------------------------
-//
-//  Table of Contents:
-//
-//   1. Global
-//   2. Breakpoints
+@import 'settings/_global';
+@import 'settings/_breakpoints';
 //   3. The Grid
 //   4. Base Typography
 //   5. Typography Helpers
 //   6. Abide
 //   7. Accordion
 //   8. Accordion Menu
-//   9. Badge
-//  10. Breadcrumbs
 //  11. Button
-//  12. Button Group
 //  13. Callout
 //  14. Card
 //  15. Close Button
@@ -36,58 +28,11 @@
 //  31. Switch
 //  32. Table
 //  33. Tabs
-//  34. Thumbnail
 //  35. Title Bar
 //  36. Tooltip
 //  37. Top Bar
-
 @import '../../vendor/foundation-sites/scss/util/util';
 
-// 1. Global
-// ---------
-
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
-$foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
-);
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
-$body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$body-antialiased: true;
-$global-margin: 1rem;
-$global-padding: 1rem;
-$global-weight-normal: normal;
-$global-weight-bold: bold;
-$global-radius: 0;
-$global-text-direction: ltr;
-$global-flexbox: false;
-$print-transparent-backgrounds: true;
-
-@include add-foundation-colors;
-
-// 2. Breakpoints
-// --------------
-
-$breakpoints: (
-  small: 0,
-  medium: 640px,
-  large: 1024px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
-);
-$print-breakpoint: large;
-$breakpoint-classes: (small medium large);
 
 // 3. The Grid
 // -----------
@@ -95,8 +40,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+        small: 20px,
+        medium: 30px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -107,27 +52,26 @@ $block-grid-max: 8;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
-  small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
-  ),
-  medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
-  ),
+        small: (
+                'h1': ('font-size': 24),
+                'h2': ('font-size': 20),
+                'h3': ('font-size': 19),
+                'h4': ('font-size': 18),
+                'h5': ('font-size': 17),
+                'h6': ('font-size': 16),
+        ),
+        medium: (
+                'h1': ('font-size': 48),
+                'h2': ('font-size': 40),
+                'h3': ('font-size': 31),
+                'h4': ('font-size': 25),
+                'h5': ('font-size': 20),
+                'h6': ('font-size': 16),
+        ),
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
@@ -135,12 +79,7 @@ $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
-$code-color: $black;
-$code-font-family: $font-family-monospace;
-$code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
-$code-padding: rem-calc(2 5 1);
+
 $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
@@ -163,24 +102,12 @@ $blockquote-border: 1px solid $medium-gray;
 $cite-font-size: rem-calc(13);
 $cite-color: $dark-gray;
 $cite-pseudo-content: '\2014 \0020';
-$keystroke-font: $font-family-monospace;
-$keystroke-color: $black;
-$keystroke-background: $light-gray;
-$keystroke-padding: rem-calc(2 4 0);
-$keystroke-radius: $global-radius;
-$abbr-underline: 1px dotted $black;
 
 // 5. Typography Helpers
 // ---------------------
 
 $lead-font-size: $global-font-size * 1.25;
 $lead-lineheight: 1.6;
-$subheader-lineheight: 1.4;
-$subheader-color: $dark-gray;
-$subheader-font-weight: $global-weight-normal;
-$subheader-margin-top: 0.2rem;
-$subheader-margin-bottom: 0.5rem;
-$stat-font-size: 2.5rem;
 
 // 6. Abide
 // --------
@@ -214,29 +141,6 @@ $accordionmenu-arrows: true;
 $accordionmenu-arrow-color: $primary-color;
 $accordionmenu-arrow-size: 6px;
 
-// 9. Badge
-// --------
-
-$badge-background: $primary-color;
-$badge-color: $white;
-$badge-color-alt: $black;
-$badge-palette: $foundation-palette;
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
-
-// 10. Breadcrumbs
-// ---------------
-
-$breadcrumbs-margin: 0 0 $global-margin 0;
-$breadcrumbs-item-font-size: rem-calc(11);
-$breadcrumbs-item-color: $primary-color;
-$breadcrumbs-item-color-current: $black;
-$breadcrumbs-item-color-disabled: $medium-gray;
-$breadcrumbs-item-margin: 0.75rem;
-$breadcrumbs-item-uppercase: true;
-$breadcrumbs-item-slash: true;
-
 // 11. Button
 // ----------
 
@@ -249,25 +153,16 @@ $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
 $button-sizes: (
-  tiny: 0.6rem,
-  small: 0.75rem,
-  default: 0.9rem,
-  large: 1.25rem,
+        tiny: 0.6rem,
+        small: 0.75rem,
+        default: 0.9rem,
+        large: 1.25rem,
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-
-// 12. Button Group
-// ----------------
-
-$buttongroup-margin: 1rem;
-$buttongroup-spacing: 1px;
-$buttongroup-child-selector: '.button';
-$buttongroup-expand-max: 6;
-$buttongroup-radius-on-each: true;
 
 // 13. Callout
 // -----------
@@ -299,16 +194,16 @@ $card-margin: $global-margin;
 
 $closebutton-position: right top;
 $closebutton-offset-horizontal: (
-  small: 0.66rem,
-  medium: 1rem,
+        small: 0.66rem,
+        medium: 1rem,
 );
 $closebutton-offset-vertical: (
-  small: 0.33em,
-  medium: 0.5rem,
+        small: 0.33em,
+        medium: 0.5rem,
 );
 $closebutton-size: (
-  small: 1.5em,
-  medium: 2em,
+        small: 1.5em,
+        medium: 2em,
 );
 $closebutton-lineheight: 1;
 $closebutton-color: $dark-gray;
@@ -333,9 +228,9 @@ $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
-  tiny: 100px,
-  small: 200px,
-  large: 400px,
+        tiny: 100px,
+        small: 200px,
+        large: 400px,
 );
 
 // 18. Dropdown Menu
@@ -491,8 +386,8 @@ $progress-radius: $global-radius;
 
 $responsive-embed-margin-bottom: rem-calc(16);
 $responsive-embed-ratios: (
-  default: 4 by 3,
-  widescreen: 16 by 9,
+        default: 4 by 3,
+        widescreen: 16 by 9,
 );
 
 // 29. Reveal
@@ -575,27 +470,6 @@ $tab-content-border: $light-gray;
 $tab-content-color: $body-font-color;
 $tab-content-padding: 1rem;
 
-// 34. Thumbnail
-// -------------
-
-$thumbnail-border: solid 4px $white;
-$thumbnail-margin-bottom: $global-margin;
-$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
-$thumbnail-transition: box-shadow 200ms ease-out;
-$thumbnail-radius: $global-radius;
-
-// 35. Title Bar
-// -------------
-
-$titlebar-background: $black;
-$titlebar-color: $white;
-$titlebar-padding: 0.5rem;
-$titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
-$titlebar-icon-spacing: 0.25rem;
-
 // 36. Tooltip
 // -----------
 
@@ -608,14 +482,3 @@ $tooltip-font-size: $small-font-size;
 $tooltip-pip-width: 0.75rem;
 $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-radius: $global-radius;
-
-// 37. Top Bar
-// -----------
-
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
-$topbar-submenu-background: $topbar-background;
-$topbar-title-spacing: 0.45rem 1rem 0 1rem;
-$topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
-
