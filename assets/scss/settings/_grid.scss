@@ -1,5 +1,6 @@
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-        medium: rem-calc(30),
+        small: rem-calc(40),
+        medium: rem-calc(40),
 );
