@@ -1,8 +1,8 @@
 a, a:visited {
-	&:link {
-		//Highlight links on iOS, Similar to :hover for mobile devices.
-		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
-	}
+    &:link {
+        //Highlight links on iOS, Similar to :hover for mobile devices.
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+    }
 }
 
 /*********************
@@ -21,7 +21,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	
+
 }
 
 h5, .h5 {
@@ -32,111 +32,112 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-	ul.off-canvas-list li {
-		list-style: none;
-	}
+    ul.off-canvas-list li {
+        list-style: none;
+    }
 }
-    
+
 /*********************
 NAVIGATION STYLES
 *********************/
 .top-bar {
-	.title-area {
-		z-index: 1;
-	}
-} 
+    .title-area {
+        z-index: 1;
+    }
+}
 
 .off-canvas-list {
-	ul {
-		margin-left: 0;
-		li {
-			a {
-				border-bottom: 0px;
-			}
-		}
-		.dropdown {
-			margin-left: 20px;
-		}
-	}
+    ul {
+        margin-left: 0;
+        li {
+            a {
+                border-bottom: 0px;
+            }
+        }
+        .dropdown {
+            margin-left: 20px;
+        }
+    }
 }
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 #content {
-	#inner-content {
-		padding: 1rem 0rem;
-	}
+    #inner-content {
+        padding: 1rem 0rem;
+    }
 }
 
 .page-title {
-	
-	// Remove Foundation vcard styling from author page titles
-	.vcard {
-		border: 0px;
-		padding: 0px;
-	}
+
+    // Remove Foundation vcard styling from author page titles
+    .vcard {
+        border: 0px;
+        padding: 0px;
+    }
 }
 
 // Post meta  
 .byline {
-	color: #999;
-	time {}
+    color: #999999;
+    time {
+    }
 }
 
 // Entry content  
 .entry-content {
-	
-	img {
-		max-width: 100%;
-		height: auto;
-	}
 
-	.alignleft, img.alignleft { 
-		margin-right: 1.5em; 
-		display: inline; 
-		float: left; 
-	}
-	.alignright, img.alignright { 
-		margin-left: 1.5em; 
-		display: inline; 
-		float: right; 
-	}
-	.aligncenter, img.aligncenter { 
-		margin-right: auto; 
-		margin-left: auto; 
-		display: block; 
-		clear: both; 
-	}
-			
-	video, object {
-		max-width: 100%;
-		height: auto;
-		}
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-	pre {
-		background: #eee;
-		border: 1px solid #cecece;
-		padding: 10px;
-		}
+    .alignleft, img.alignleft {
+        margin-right: 1.5em;
+        display: inline;
+        float: left;
+    }
+    .alignright, img.alignright {
+        margin-left: 1.5em;
+        display: inline;
+        float: right;
+    }
+    .aligncenter, img.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        clear: both;
+    }
 
-} 
+    video, object {
+        max-width: 100%;
+        height: auto;
+    }
+
+    pre {
+        background: #EEEEEE;
+        border: 1px solid #CECECE;
+        padding: 10px;
+    }
+
+}
 
 .wp-caption {
-	max-width: 100%;
-	background: #eee;
-	padding: 5px;
+    max-width: 100%;
+    background: #EEEEEE;
+    padding: 5px;
 
-	// Images inside wp-caption  
-	img {
-		max-width: 100%;
-		margin-bottom: 0;
-		width: 100%;
-	}
+    // Images inside wp-caption
+    img {
+        max-width: 100%;
+        margin-bottom: 0;
+        width: 100%;
+    }
 
-	p.wp-caption-text {
-		font-size: 0.85em;
-		margin: 4px 0 7px;
-		text-align: center;
-	}
+    p.wp-caption-text {
+        font-size: 0.85em;
+        margin: 4px 0 7px;
+        text-align: center;
+    }
 } 
