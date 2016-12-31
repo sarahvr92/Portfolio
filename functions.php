@@ -1,7 +1,7 @@
 <?php
+require_once(get_template_directory() . '/functions/theme-support.php');
 require_once(get_template_directory() . '/functions/admin.php');
 
-require_once(get_template_directory() . '/assets/functions/theme-support.php');
 require_once(get_template_directory() . '/assets/functions/cleanup.php');
 require_once(get_template_directory() . '/assets/functions/enqueue-scripts.php');
 require_once(get_template_directory() . '/assets/functions/menu.php');
