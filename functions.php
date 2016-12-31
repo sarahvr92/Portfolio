@@ -1,9 +1,9 @@
 <?php
 require_once(get_template_directory() . '/functions/theme-support.php');
+require_once(get_template_directory() . '/functions/cleanup.php');
 require_once(get_template_directory() . '/functions/admin.php');
 require_once(get_template_directory() . '/functions/login.php');
 
-require_once(get_template_directory() . '/assets/functions/cleanup.php');
 require_once(get_template_directory() . '/assets/functions/enqueue-scripts.php');
 require_once(get_template_directory() . '/assets/functions/menu.php');
 require_once(get_template_directory() . '/assets/functions/sidebar.php');
