@@ -1,6 +1,7 @@
 <?php
 require_once(get_template_directory() . '/functions/theme-support.php');
 require_once(get_template_directory() . '/functions/admin.php');
+require_once(get_template_directory() . '/functions/login.php');
 
 require_once(get_template_directory() . '/assets/functions/cleanup.php');
 require_once(get_template_directory() . '/assets/functions/enqueue-scripts.php');
@@ -14,6 +15,3 @@ require_once(get_template_directory() . '/assets/functions/page-navi.php');
 
 // Use this as a template for custom post types
 // require_once(get_template_directory().'/assets/functions/custom-post-type.php');
-
-// Customize the WordPress login menu
-// require_once(get_template_directory().'/assets/functions/login.php');
