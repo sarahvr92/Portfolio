@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Neuzeit Grotesk';
-  src: url("assets/fonts/neuzegrotreg-webfont.eot");
-  src: url("assets/fonts/neuzegrotreg-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/neuzegrotreg-webfont.woff2") format("woff2"), url("assets/fonts/neuzegrotreg-webfont.woff") format("woff"), url("assets/fonts/neuzegrotreg-webfont.ttf") format("truetype"), url("assets/fonts/neuzegrotreg-webfont.svg#neuzeit_grotesk_tregular") format("svg");
+  src: url("../fonts/neuzegrotreg-webfont.eot");
+  src: url("../fonts/neuzegrotreg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/neuzegrotreg-webfont.woff2") format("woff2"), url("../fonts/neuzegrotreg-webfont.woff") format("woff"), url("../fonts/neuzegrotreg-webfont.ttf") format("truetype"), url("../fonts/neuzegrotreg-webfont.svg#neuzeit_grotesk_tregular") format("svg");
   font-weight: 400;
   font-style: normal; }
 
@@ -2645,3 +2645,13 @@ select {
     top: -0.1em;
     float: none;
     margin-left: 0; }
+
+.header-secondary {
+  background-color: #FFFFFF; }
+  .header-secondary a {
+    display: inline-block;
+    padding: 0.55556rem 0.83333rem;
+    font-size: 0.66667rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2em; }
