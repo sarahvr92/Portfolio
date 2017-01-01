@@ -40,6 +40,6 @@
             </div>
 
             <div class="header-primary">
-                <?php joints_off_canvas_nav(); ?>
+                <?php portfolio_main_nav(); ?>
             </div>
         </header>

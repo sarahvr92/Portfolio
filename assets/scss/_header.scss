@@ -1,0 +1,12 @@
+.header-secondary {
+    background-color: $white;
+
+    a {
+        display: inline-block;
+        padding: rem-calc(10 15);
+        font-size: rem-calc(12);
+        font-weight: $global-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+    }
+}
