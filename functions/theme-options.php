@@ -114,12 +114,12 @@ class portfolio_theme_options {
     }
 }
 
-function myprefix_admin() {
+function portfolio_admin() {
     return portfolio_theme_options::get_instance();
 }
 
-function myprefix_get_option($key = '') {
-    return cmb2_get_option(myprefix_admin()->key, $key);
+function portfolio_get_option($key = '') {
+    return cmb2_get_option(portfolio_admin()->key, $key);
 }
 
-myprefix_admin();
+portfolio_admin();

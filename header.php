@@ -37,11 +37,44 @@
     <div class="off-canvas-content" data-off-canvas-content>
         <header class="header" role="banner">
             <div class="header-secondary">
-                <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                <a href="<?php echo home_url(); ?>" class="header-logo"><?php bloginfo('name'); ?></a>
 
-                <div class="show-for-large">
-                    Social Media
-                </div>
+                <ul class="social-media-list show-for-large">
+                    <?php
+                    $social_media = array(
+                        'dribbble' => array(
+                            'url'   => portfolio_get_option('_theme_dribbble'),
+                            'label' => __('View Dribbble portfolio'),
+                            'img'   => get_template_directory() . '/assets/img/dribbble.svg'
+                        ),
+                        'github'   => array(
+                            'url'   => portfolio_get_option('_theme_github'),
+                            'label' => __('View Github profile'),
+                            'img'   => get_template_directory() . '/assets/img/github.svg'
+                        ),
+                        'linkedin' => array(
+                            'url'   => portfolio_get_option('_theme_linkedin'),
+                            'label' => __('View LinkedIn profile'),
+                            'img'   => get_template_directory() . '/assets/img/linkedin.svg'
+                        ),
+                        'twitter'  => array(
+                            'url'   => portfolio_get_option('_theme_twitter'),
+                            'label' => __('View Twitter profile'),
+                            'img'   => get_template_directory() . '/assets/img/twitter.svg'
+                        ),
+                    );
+
+                    foreach ($social_media as $social_profile):
+                        if ($social_profile['url']): ?>
+                            <li>
+                                <a href="<?php echo $social_profile['url']; ?>" target="_blank"
+                                   aria-label="<?php echo $social_profile['label']; ?>">
+                                    <img src="<?php echo $social_profile['img'] ?>" alt="" aria-hidden="true">
+                                </a>
+                            </li>
+                        <?php endif;
+                    endforeach; ?>
+                </ul>
             </div>
 
             <?php portfolio_main_nav(); ?>

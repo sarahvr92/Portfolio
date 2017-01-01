@@ -3,18 +3,20 @@ $global-font-size: rem-calc(18);
 $global-lineheight: 1.55;
 
 $foundation-palette: (
-        primary: #1779BA,
-        secondary: #767676,
+        primary: #d8b51d,
+        primary-alt: #be9a00,
+        secondary: #06182b,
+        secondary-alt: #3a495a,
         success: #3ADB76,
-        warning: #FFAE00,
+        warning: #d8b51d,
         alert: #CC4B37,
 );
 
-$light-gray: #E6E6E6;
+$white: #FFFFFF;
+$light-gray: #f2f2f2;
 $medium-gray: #CACACA;
 $dark-gray: #8A8A8A;
 $black: #0A0A0A;
-$white: #FFFFFF;
 
 $body-antialiased: true;
 $body-font-family: 'Neuzeit Grotesk', Helvetica, Roboto, Arial, sans-serif;
@@ -24,7 +26,7 @@ $body-font-color: $black;
 $global-weight-normal: 400;
 $global-weight-bold: 700;
 
-$global-margin: 1rem;
-$global-padding: 1rem;
+$global-margin: rem-calc(70);
+$global-padding: rem-calc(35);
 $global-radius: 0;
 $global-flexbox: true;

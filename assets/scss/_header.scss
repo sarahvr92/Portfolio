@@ -1,14 +1,14 @@
 .header-secondary {
-    background-color: $white;
+    background-color: pink; //TODO: Change this to white
+}
 
-    a {
-        display: inline-block;
-        padding: rem-calc(10 15);
-        font-size: rem-calc(12);
-        font-weight: $global-weight-bold;
-        text-transform: uppercase;
-        letter-spacing: .2em;
-    }
+.header-logo {
+    display: inline-block;
+    padding: rem-calc(10 15);
+    font-size: rem-calc(12);
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: .2em;
 }
 
 .header-navigation {
