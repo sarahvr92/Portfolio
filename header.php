@@ -29,7 +29,8 @@
 
 <body <?php body_class(); ?>>
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF2WST" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF2WST" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <div class="off-canvas-wrapper">
@@ -37,9 +38,11 @@
         <header class="header" role="banner">
             <div class="header-secondary">
                 <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+
+                <div class="show-for-large">
+                    Social Media
+                </div>
             </div>
 
-            <div class="header-primary">
-                <?php portfolio_main_nav(); ?>
-            </div>
+            <?php portfolio_main_nav(); ?>
         </header>
