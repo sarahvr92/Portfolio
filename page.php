@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div id="content">
-        <div id="inner-content" class="row">
-            <main id="main" class="small-12 column" role="main">
+        <div id="inner-content" class="row align-center">
+            <main id="main" class="small-10 column" role="main">
                 <?php if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
                         <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
@@ -16,7 +16,7 @@
                         </article>
                     <?php endwhile;
                 endif; ?>
-            </main> <!-- end #main -->
-        </div> <!-- end #inner-content -->
-    </div> <!-- end #content -->
+            </main>
+        </div>
+    </div>
 <?php get_footer(); ?>
