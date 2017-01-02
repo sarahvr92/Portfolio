@@ -59,7 +59,7 @@ $blockquote-border: 1px solid $medium-gray;
 $cite-font-size: rem-calc(13);
 $cite-color: $dark-gray;
 $cite-pseudo-content: '\2014 \0020';
-$lead-font-size: $global-font-size * 1.25;
+$lead-font-size: inherit;
 $lead-lineheight: 1.6;
 
 // 11. Button

@@ -1,3 +1,12 @@
+.lead {
+    font-weight: $global-weight-bold;
+}
+
+p,
+p.lead {
+    @include responsive-font(1.4vw, 16px, 22px, 18px);
+}
+
 a {
     font-weight: $global-weight-bold;
     transition: all .25s;
