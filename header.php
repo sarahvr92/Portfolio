@@ -37,39 +37,36 @@
     <div class="off-canvas-content" data-off-canvas-content>
         <header class="header" role="banner">
             <div class="header-secondary">
-                <a href="<?php echo home_url(); ?>" class="header-logo"><?php bloginfo('name'); ?></a>
+                <div class="header-logo-container">
+                    <a href="<?php echo home_url(); ?>" class="header-logo"><?php bloginfo('name'); ?></a>
+                </div>
 
-                <ul class="social-media-list show-for-large">
+                <ul class="social-media-list text-center show-for-medium">
                     <?php
                     $social_media = array(
                         'dribbble' => array(
-                            'url'   => portfolio_get_option('_theme_dribbble'),
-                            'label' => __('View Dribbble portfolio'),
-                            'img'   => get_template_directory() . '/assets/img/dribbble.svg'
+                            'url' => portfolio_get_option('_theme_dribbble'),
+                            'img' => get_template_directory() . '/assets/images/dribbble.svg'
                         ),
                         'github'   => array(
-                            'url'   => portfolio_get_option('_theme_github'),
-                            'label' => __('View Github profile'),
-                            'img'   => get_template_directory() . '/assets/img/github.svg'
+                            'url' => portfolio_get_option('_theme_github'),
+                            'img' => get_template_directory() . '/assets/images/github.svg'
                         ),
                         'linkedin' => array(
-                            'url'   => portfolio_get_option('_theme_linkedin'),
-                            'label' => __('View LinkedIn profile'),
-                            'img'   => get_template_directory() . '/assets/img/linkedin.svg'
+                            'url' => portfolio_get_option('_theme_linkedin'),
+                            'img' => get_template_directory() . '/assets/images/linkedin.svg'
                         ),
                         'twitter'  => array(
-                            'url'   => portfolio_get_option('_theme_twitter'),
-                            'label' => __('View Twitter profile'),
-                            'img'   => get_template_directory() . '/assets/img/twitter.svg'
+                            'url' => portfolio_get_option('_theme_twitter'),
+                            'img' => get_template_directory() . '/assets/images/twitter.svg'
                         ),
                     );
 
                     foreach ($social_media as $social_profile):
                         if ($social_profile['url']): ?>
                             <li>
-                                <a href="<?php echo $social_profile['url']; ?>" target="_blank"
-                                   aria-label="<?php echo $social_profile['label']; ?>">
-                                    <img src="<?php echo $social_profile['img'] ?>" alt="" aria-hidden="true">
+                                <a href="<?php echo $social_profile['url']; ?>" target="_blank">
+                                    <?php echo file_get_contents($social_profile['img']); ?>
                                 </a>
                             </li>
                         <?php endif;

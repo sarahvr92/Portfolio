@@ -1,24 +1,127 @@
 .header-secondary {
-    background-color: pink; //TODO: Change this to white
+    background-color: $white;
+    z-index: 25;
+
+    @include breakpoint(medium) {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        width: rem-calc(50);
+        height: 100%;
+    }
+
+    &::after {
+        @include breakpoint(medium) {
+            position: fixed;
+            top: rem-calc(24);
+            bottom: rem-calc(24);
+            left: rem-calc(24);
+            right: rem-calc(24);
+            content: "";
+            speak: none;
+            border: inset 1px solid $light-gray;
+            pointer-events: none;
+            z-index: 50;
+        }
+    }
+
+    .social-media-list {
+        position: relative;
+        margin-bottom: rem-calc(50);
+        background-color: $white;
+        z-index: 75;
+
+        a {
+            padding: rem-calc(10);
+        }
+    }
+}
+
+.header-logo-container {
+    position: relative;
+
+    @include breakpoint(medium) {
+        margin-top: rem-calc(50);
+    }
 }
 
 .header-logo {
+    position: relative;
     display: inline-block;
     padding: rem-calc(10 15);
     font-size: rem-calc(12);
     font-weight: $global-weight-bold;
-    text-transform: uppercase;
     letter-spacing: .2em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $secondary-color;
+    white-space: nowrap;
+    z-index: 75;
+
+    @include breakpoint(medium) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: rem-calc(0 10);
+        font-size: rem-calc(14);
+        line-height: rem-calc(50);
+        transform-origin: top left;
+        transform: rotate(-90deg) translate(-100%);
+        background-color: $white;
+    }
 }
 
 .header-navigation {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    @include breakpoint(small only) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-size: rem-calc(12);
+        text-align: center;
+        background-color: $white;
+        border-top: 1px solid $light-gray;
+    }
+
+    @include breakpoint(medium) {
+        position: absolute;
+        top: rem-calc(65) - rem-calc(10);
+        right: rem-calc(65) - rem-calc(10);
+    }
 
     ul {
         margin: 0;
         list-style-type: none;
+
+        @include breakpoint(small only) {
+            display: flex;
+            align-items: stretch;
+        }
+    }
+
+    li {
+        color: $secondary-color;
+
+        @include breakpoint(small only) {
+            flex-grow: 1;
+        }
+
+        @include breakpoint(medium) {
+            display: inline-block;
+        }
+
+        &.current_page_item {
+            color: $primary-color;
+        }
+    }
+
+    a {
+        display: block;
+        padding: rem-calc(10);
+        line-height: 1.2;
+        color: inherit;
     }
 }
