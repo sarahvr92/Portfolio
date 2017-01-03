@@ -6,46 +6,8 @@ a, a:visited {
 }
 
 /*********************
-H1, H2, H3, H4, H5 P STYLES
-*********************/
-h1, .h1 {
-
-}
-
-h2, .h2 {
-
-}
-
-h3, .h3 {
-
-}
-
-h4, .h4 {
-
-}
-
-h5, .h5 {
-
-}
-
-/*********************
-HEADER STYLES
-*********************/
-.header {
-    ul.off-canvas-list li {
-        list-style: none;
-    }
-}
-
-/*********************
 NAVIGATION STYLES
 *********************/
-.top-bar {
-    .title-area {
-        z-index: 1;
-    }
-}
-
 .off-canvas-list {
     ul {
         margin-left: 0;
@@ -60,34 +22,14 @@ NAVIGATION STYLES
     }
 }
 
-/*********************
-POSTS & CONTENT STYLES
-*********************/
-#content {
-    #inner-content {
-        padding: 1rem 0rem;
-    }
-}
-
 .page-title {
-
-    // Remove Foundation vcard styling from author page titles
     .vcard {
-        border: 0px;
-        padding: 0px;
+        border: 0;
+        padding: 0;
     }
 }
 
-// Post meta  
-.byline {
-    color: #999999;
-    time {
-    }
-}
-
-// Entry content  
 .entry-content {
-
     img {
         max-width: 100%;
         height: auto;
@@ -114,13 +56,6 @@ POSTS & CONTENT STYLES
         max-width: 100%;
         height: auto;
     }
-
-    pre {
-        background: #EEEEEE;
-        border: 1px solid #CECECE;
-        padding: 10px;
-    }
-
 }
 
 .wp-caption {

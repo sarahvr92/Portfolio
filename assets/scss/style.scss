@@ -47,8 +47,9 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
+@import "main";
+
 @import "typography";
 
 @import "header";
-
-@import "social-media";
+@import "components";

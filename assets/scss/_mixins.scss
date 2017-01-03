@@ -33,3 +33,34 @@
     font-size: $responsive;
 }
 
+// Viewport Sized Bottom Margin
+// @author Sarah Rose (@sarahvrose)
+//
+// @param {Number}   $position    - Margin position
+// @param {Number}   $responsive  - Viewport-based size
+// @param {Number}   $min         - Minimum bottom margin (px)
+// @param {Number}   $max         - Maximum bottom margin (px)
+// @param {Number}   $fallback    - Fallback for viewport-based units (optional)
+//
+// @include responsive-margin(bottom, 5vw, 35px, 70px, 50px);
+
+@mixin responsive-margin($position, $responsive, $min, $max, $fallback: false) {
+    $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+    $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+    $min-breakpoint: $min / $responsive-unitless * 100;
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (max-#{$dimension}: #{$min-breakpoint}) {
+        margin-#{$position}: $min;
+    }
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+        margin-#{$position}: $max;
+    }
+
+    @if $fallback {
+        margin-#{$position}: $fallback;
+    }
+
+    margin-#{$position}: $responsive;
+}

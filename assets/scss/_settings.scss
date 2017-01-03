@@ -6,10 +6,10 @@
 // 4. Base Typography
 // ------------------
 
-//$header-margin-bottom: 0.5rem;
+$header-margin-bottom: $global-margin;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-bold;
-$header-lineheight: 1.45;
+$header-lineheight: 1.4;
 $header-color: $primary-color;
 //$header-styles: (
 //    small: (
@@ -39,39 +39,39 @@ $subheader-lineheight: 1;
 $subheader-color: $secondary-color;
 
 $lead-font-size: inherit;
-//$lead-lineheight: 1.6;
+$lead-lineheight: $global-lineheight;
 
-//$paragraph-margin-bottom: 1rem;
+$paragraph-margin-bottom: $global-margin;
 $paragraph-lineheight: $global-lineheight;
 $paragraph-text-rendering: optimizeLegibility;
 
-//$anchor-color: $primary-color;
-//$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color: $primary-color;
+$anchor-color-hover: darken($anchor-color, 7%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 
-//$hr-width: $global-width;
-//$hr-border: 1px solid $medium-gray;
-//$hr-margin: rem-calc(20) auto;
+$hr-width: 100%;
+$hr-border: 1px solid $light-gray;
+$hr-margin: $global-margin auto;
 
-//$list-margin-bottom: $paragraph-margin-bottom;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-side-margin: $global-margin;
+$list-nested-side-margin: $list-side-margin;
+$list-style-type: disc;
+$list-style-position: outside;
 $list-lineheight: $paragraph-lineheight;
-//$list-style-type: disc;
-//$list-style-position: outside;
-//$list-side-margin: 1.25rem;
-//$list-nested-side-margin: 1.25rem;
 
-//$defnlist-margin-bottom: 1rem;
-//$defnlist-term-weight: $global-weight-bold;
-//$defnlist-term-margin-bottom: 0.3rem;
+$defnlist-margin-bottom: $list-margin-bottom;
+$defnlist-term-margin-bottom: 0;
+$defnlist-term-weight: inherit;
 
 //$blockquote-color: $dark-gray;
-//$blockquote-padding: rem-calc(9 20 0 19);
+//$blockquote-padding: rem-calc(9 20 9 19);
 //$blockquote-border: 1px solid $medium-gray;
 
-//$cite-font-size: rem-calc(13);
+$cite-font-size: rem-calc(14);
 //$cite-color: $dark-gray;
-//$cite-pseudo-content: '\2014 \0020';
+$cite-pseudo-content: '\2014 \0020';
 
 // 11. Button
 // ----------
@@ -136,7 +136,4 @@ $list-lineheight: $paragraph-lineheight;
 //$input-radius: $global-radius;
 //$form-button-radius: $global-radius;
 
-// 28. Responsive Embed
-// --------------------
-
-//$responsive-embed-margin-bottom: rem-calc(16);
+@import 'settings/_components';
