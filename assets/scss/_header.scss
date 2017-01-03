@@ -54,7 +54,7 @@
     padding: rem-calc(10 15);
     font-size: rem-calc(12);
     font-weight: $global-weight-bold;
-    letter-spacing: .2em;
+    letter-spacing: $subheader-letter-spacing;
     line-height: 1;
     text-transform: uppercase;
     color: $secondary-color;

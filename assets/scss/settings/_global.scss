@@ -1,6 +1,6 @@
 $global-width: rem-calc(1440);
 $global-font-size: rem-calc(18);
-$global-lineheight: 1.55;
+$global-lineheight: 1.6;
 
 $foundation-palette: (
         primary: #d8b51d,
@@ -21,7 +21,7 @@ $black: #0A0A0A;
 $body-antialiased: true;
 $body-font-family: 'Neuzeit Grotesk', Helvetica, Roboto, Arial, sans-serif;
 $body-background: $white;
-$body-font-color: $black;
+$body-font-color: get-color('secondary-alt');
 
 $global-weight-normal: 400;
 $global-weight-bold: 700;
@@ -30,3 +30,9 @@ $global-margin: rem-calc(70);
 $global-padding: rem-calc(35);
 $global-radius: 0;
 $global-flexbox: true;
+
+$global-bottom-margin: (
+    small: $global-margin/2,
+    medium: $global-margin,
+    large: $global-margin,
+);
