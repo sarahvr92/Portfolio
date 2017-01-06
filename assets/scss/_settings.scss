@@ -65,12 +65,12 @@ $defnlist-margin-bottom: $list-margin-bottom;
 $defnlist-term-margin-bottom: 0;
 $defnlist-term-weight: inherit;
 
-//$blockquote-color: $dark-gray;
-//$blockquote-padding: rem-calc(9 20 9 19);
-//$blockquote-border: 1px solid $medium-gray;
+$blockquote-color: $primary-color;
+$blockquote-padding: rem-calc(15 30 15 29);
+$blockquote-border: 1px solid $light-gray;
 
 $cite-font-size: rem-calc(14);
-//$cite-color: $dark-gray;
+$cite-color: $secondary-color;
 $cite-pseudo-content: '\2014 \0020';
 
 // 11. Button

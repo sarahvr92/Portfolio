@@ -46,9 +46,10 @@ a {
     transition: all .25s;
 }
 
-//TODO: Style blockquote
 blockquote {
     p {
+        font-family: Georgia, serif;
+        @include responsive-font(1.8vw, 20px, 26px, 22px);
         font-style: italic;
 
         &:last-child {
@@ -57,7 +58,9 @@ blockquote {
     }
 
     cite {
+        font-family: $body-font-family;
         font-style: normal;
+        font-weight: $global-weight-bold;
     }
 }
 
