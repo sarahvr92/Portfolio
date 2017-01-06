@@ -102,6 +102,7 @@
 
         @include breakpoint(medium) {
             display: inline-block;
+            color: $secondary-color;
         }
 
         &.current_page_item {
@@ -115,5 +116,19 @@
         font-size: rem-calc(12);
         line-height: 1.2;
         color: inherit;
+
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(13);
+            font-weight: $global-weight-bold;
+            letter-spacing: $subheader-letter-spacing;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
     }
 }
