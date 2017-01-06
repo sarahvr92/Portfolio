@@ -36,7 +36,7 @@
 <div class="off-canvas-wrapper">
     <div class="off-canvas-content" data-off-canvas-content>
         <header class="header" role="banner">
-            <div class="header-secondary">
+            <div class="header-sidebar">
                 <div class="header-logo-container">
                     <a href="<?php echo home_url(); ?>" class="header-logo"><?php bloginfo('name'); ?></a>
                 </div>
