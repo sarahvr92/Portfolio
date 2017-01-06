@@ -73,14 +73,8 @@
 
 .header-navigation {
     @include breakpoint(small only) {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        font-size: rem-calc(12);
         text-align: center;
-        background-color: $white;
-        border-top: 1px solid $light-gray;
+        background-color: $secondary-color;
     }
 
     @include breakpoint(medium) {
@@ -100,7 +94,7 @@
     }
 
     li {
-        color: $secondary-color;
+        color: $white;
 
         @include breakpoint(small only) {
             flex-grow: 1;
@@ -117,7 +111,8 @@
 
     a {
         display: block;
-        padding: rem-calc(10);
+        padding: rem-calc(10 15);
+        font-size: rem-calc(12);
         line-height: 1.2;
         color: inherit;
     }
