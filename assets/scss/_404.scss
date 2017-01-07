@@ -1,0 +1,33 @@
+.error404 {
+    .inner-content {
+        position: relative;
+        height: 100vh;
+    }
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include responsive-font(38vw, 100px, 400px, 240px);
+        color: $light-gray;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    p {
+        margin-bottom: 0;
+        @include responsive-font(3vw, 22px, 36px, 24px);
+        font-weight: $global-weight-bold;
+        color: $primary-color;
+    }
+
+    .bottom-image {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        max-width: rem-calc(200);
+        transform: translateX(-50%);
+        pointer-events: none;
+        z-index: 200;
+    }
+}

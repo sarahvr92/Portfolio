@@ -1,31 +1,29 @@
 <?php get_header(); ?>
-			
-	<div id="content">
+    <div id="content">
+        <div id="inner-content" class="inner-content row align-center">
+            <main id="main" class="small-10 align-self-middle column" role="main">
+                <article class="text-center">
+                    <h1><?php _e('404'); ?></h1>
 
-		<div id="inner-content" class="row">
-	
-			<main id="main" class="large-8 medium-8 columns" role="main">
+                    <p><?php _e('Page Not Found'); ?></p>
 
-				<article id="content-not-found">
-				
-					<header class="article-header">
-						<h1><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
-					</header> <!-- end article header -->
-			
-					<section class="entry-content">
-						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'jointswp' ); ?></p>
-					</section> <!-- end article section -->
+                    <small class="show-for-medium">
+                        <?php $random_phrases = array(
+                            __('I solemnly swear that I am up to no good.'),
+                            __('Well, this is awkward...'),
+                            __('Let\'s just go to the movies instead.'),
+                            __('AAAAHHHHHHHHHHHH!!'),
+                            __('Just like my motivation.'),
+                        ); ?>
 
-					<section class="search">
-					    <p><?php get_search_form(); ?></p>
-					</section> <!-- end search section -->
-			
-				</article> <!-- end article -->
-	
-			</main> <!-- end #main -->
+                        <i><?php echo $random_phrases[mt_rand(0, count($random_phrases) - 1)]; ?></i>
+                    </small>
 
-		</div> <!-- end #inner-content -->
-
-	</div> <!-- end #content -->
-
+                    <?php $upload_dir = wp_upload_dir(); ?>
+                    <img class="bottom-image" src="<?php echo $upload_dir['baseurl'] . '/404-gif.gif'; ?>"
+                         alt="" aria-hidden="true">
+                </article>
+            </main>
+        </div>
+    </div>
 <?php get_footer(); ?>
