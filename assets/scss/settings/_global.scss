@@ -1,0 +1,38 @@
+$global-width: rem-calc(1440);
+$global-font-size: rem-calc(18);
+$global-lineheight: 1.6;
+
+$foundation-palette: (
+        primary: #d8b51d,
+        primary-alt: #be9a00,
+        secondary: #06182b,
+        secondary-alt: #3a495a,
+        success: #3ADB76,
+        warning: #d8b51d,
+        alert: #CC4B37,
+);
+
+$white: #FFFFFF;
+$light-gray: #f2f2f2;
+$medium-gray: #CACACA;
+$dark-gray: #8A8A8A;
+$black: #0A0A0A;
+
+$body-antialiased: true;
+$body-font-family: 'Neuzeit Grotesk', Helvetica, Roboto, Arial, sans-serif;
+$body-background: $white;
+$body-font-color: get-color('secondary-alt');
+
+$global-weight-normal: 400;
+$global-weight-bold: 700;
+
+$global-margin: rem-calc(30);
+$global-padding: rem-calc(30);
+$global-radius: 0;
+$global-flexbox: true;
+
+$global-bottom-margin: (
+    small: $global-margin,
+    medium: $global-margin*1.25,
+    large: $global-margin*2,
+);

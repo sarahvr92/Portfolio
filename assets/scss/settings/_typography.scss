@@ -1,0 +1,74 @@
+$header-margin-bottom: $global-margin;
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-lineheight: 1.4;
+$header-color: $primary-color;
+$header-styles: (
+    small: (
+        'h1': ('font-size': 48),
+        'h2': ('font-size': 36),
+        'h3': ('font-size': 32),
+        'h4': ('font-size': 26),
+        'h5': ('font-size': 22),
+        'h6': ('font-size': 18),
+    ),
+    medium: (
+        'h1': ('font-size': 56),
+        //        'h2': ('font-size': 40),
+        //        'h3': ('font-size': 31),
+        //        'h4': ('font-size': 25),
+        //        'h5': ('font-size': 20),
+        //        'h6': ('font-size': 16),
+    ),
+    large: (
+        'h1': ('font-size': 120),
+        //        'h2': ('font-size': 40),
+        //        'h3': ('font-size': 31),
+        //        'h4': ('font-size': 25),
+        //        'h5': ('font-size': 20),
+        //        'h6': ('font-size': 16),
+    ),
+);
+$header-text-rendering: optimizeLegibility;
+
+$subheader-margin-top: 0;
+$subheader-margin-bottom: 0;
+$subheader-font-weight: $global-weight-bold;
+$subheader-letter-spacing: .2em;
+$subheader-lineheight: 1;
+$subheader-color: $secondary-color;
+
+$lead-font-size: inherit;
+$lead-lineheight: $global-lineheight;
+
+$paragraph-margin-bottom: $global-margin;
+$paragraph-lineheight: $global-lineheight;
+$paragraph-text-rendering: optimizeLegibility;
+
+$anchor-color: $primary-color;
+$anchor-color-hover: darken($anchor-color, 7%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+
+$hr-width: 100%;
+$hr-border: 1px solid $light-gray;
+$hr-margin: $global-margin auto;
+
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-side-margin: $global-margin;
+$list-nested-side-margin: $list-side-margin;
+$list-style-type: disc;
+$list-style-position: outside;
+$list-lineheight: $paragraph-lineheight;
+
+$defnlist-margin-bottom: $list-margin-bottom;
+$defnlist-term-margin-bottom: 0;
+$defnlist-term-weight: inherit;
+
+$blockquote-color: $primary-color;
+$blockquote-padding: rem-calc(0 30 0 29);
+$blockquote-border: 1px solid $light-gray;
+
+$cite-font-size: rem-calc(14);
+$cite-color: $secondary-color;
+$cite-pseudo-content: '\2014 \0020';

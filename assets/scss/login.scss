@@ -1,48 +1,106 @@
-/******************************************************************
-
-Stylesheet: Login Stylesheet
-
-This stylesheet is loaded is only on the login page. This way you can style
-the login page. It won't affect any other page, admin or front-end.
-
-Make sure functions/admin.php is activated in your functions.php file.
-
-This stylesheet is turned off by default.
-
-For more info, check out the codex:
-http://codex.wordpress.org/Creating_Admin_Themes
-
-******************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body.login {
-	
+    display: flex;
+    background: #FFFFFF;
 }
-
 
 #login {
-	
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    background: #06182B;
 }
 
-// Change the login logo
 .login h1 a {
-	background: url(../images/login-logo.png) no-repeat top center;
-	width: 326px;
-	height: 67px;
-	text-indent: -9999px;
-	overflow: hidden;
-	padding-bottom: 15px;
-	display: block;
+    position: absolute;
+    margin: 0;
+    width: 1px;
+    height: 1px;
+    background: none;
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
-form {
-
+#login form {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
 }
 
-body form .input {
-
+#login form p:not(:last-child) {
+    margin-bottom: 20px;
 }
 
-// Login Button Style
-#wp-submit {
-	
+#login form label {
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #D8B51D;
+}
+
+#login form .input {
+    margin: 2px 0 0;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #3A495A;
+    border: 3px solid #3A495A;
+    box-shadow: none;
+    transition: all 250ms;
+}
+
+#login form .input:hover {
+    background-color: #3A495A;
+    border-color: #4E5A67;
+}
+
+#login form .input:focus {
+    background-color: #4E5A67;
+    border-color: #4E5A67;
+}
+
+#login form p.forgetmenot {
+    display: none;
+    float: none;
+}
+
+#login form p.submit {
+    margin-top: 30px;
+}
+
+#login form #wp-submit {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+    font-size: 10px;
+    line-height: 1;
+    text-shadow: none;
+    text-transform: uppercase;
+    background-color: #D8B51D;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    transition: all 250ms;
+}
+
+#login form #wp-submit:hover,
+#login form #wp-submit:focus {
+    background-color: #be9a00;
+}
+
+p#nav,
+p#backtoblog,
+p.message {
+    display: none;
+}
+
+#login #login_error {
+    margin-bottom: 25px;
+    color: #06182B;
 }
