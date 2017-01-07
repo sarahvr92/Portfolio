@@ -1,32 +1,22 @@
 <?php get_header(); ?>
-			
 	<div id="content">
-	
-		<div id="inner-content" class="row">
-	
-		    <main id="main" class="large-8 medium-8 columns" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
-				<?php endwhile; ?>	
+		<div id="inner-content" class="row align-center">
+			<main id="main" class="small-10 column" role="main">
+				<?php if (have_posts()) :
+					while (have_posts()) : the_post(); ?>
+						<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
+							<header class="article-header">
+								<h1 class="page-title"><?php the_title(); ?></h1>
+							</header>
 
-					<?php joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
-				<?php endif; ?>
-																								
-		    </main> <!-- end #main -->
-		    
-		    <?php get_sidebar(); ?>
-
-		</div> <!-- end #inner-content -->
-
-	</div> <!-- end #content -->
-
+							<section class="entry-content" itemprop="articleBody">
+								<?php the_content(); ?>
+								<?php wp_link_pages(); ?>
+							</section>
+						</article>
+					<?php endwhile;
+				endif; ?>
+			</main>
+		</div>
+	</div>
 <?php get_footer(); ?>
