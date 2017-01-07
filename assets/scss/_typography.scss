@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    @include responsive-margin(bottom, 2.8vw, 15px, 20px);
 }
 
 h1, .h1 {
@@ -9,6 +9,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
+    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
 }
 
 h3, .h3 {
@@ -47,6 +48,8 @@ a {
 }
 
 blockquote {
+    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+
     p {
         font-family: Georgia, serif;
         @include responsive-font(1.8vw, 20px, 26px, 22px);
