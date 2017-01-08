@@ -15,6 +15,14 @@ require_once(get_template_directory() . '/assets/functions/page-navi.php');
 // Remove 4.2 Emoji Support
 // require_once(get_template_directory().'/assets/functions/disable-emoji.php');
 
+add_filter('post_thumbnail_html', 'remove_width_attribute', 10);
+add_filter('image_send_to_editor', 'remove_width_attribute', 10);
+
+function remove_width_attribute($html) {
+    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+    return $html;
+}
+
 // Remove All Yoast HTML Comments
 if (defined('WPSEO_VERSION')) {
     add_action('get_header', function () {
