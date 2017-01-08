@@ -6,6 +6,7 @@ require_once(get_template_directory() . '/functions/admin.php');
 require_once(get_template_directory() . '/functions/login.php');
 require_once(get_template_directory() . '/functions/theme-options.php');
 require_once(get_template_directory() . '/functions/menu.php');
+require_once(get_template_directory() . '/functions/metaboxes.php');
 
 require_once(get_template_directory() . '/assets/functions/sidebar.php');
 require_once(get_template_directory() . '/assets/functions/comments.php');
