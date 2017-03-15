@@ -21,8 +21,10 @@ function remove_width_attribute($html) {
     return $html;
 }
 
-// Remove All Yoast HTML Comments
+// Remove All Yoast HTML Comments and JSON Search
 if (defined('WPSEO_VERSION')) {
+    add_filter('disable_wpseo_json_ld_search', '__return_true');
+    
     add_action('get_header', function () {
         ob_start(function ($o) {
             return preg_replace('/\n?<.*?yoast.*?>/mi', '', $o);

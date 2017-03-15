@@ -12,7 +12,7 @@
                                  itemscope itemtype="http://schema.org/WebPage">
                             <div class="small-10 large-8 xlarge-6 column">
                                 <header class="split-page-content-header">
-                                    <h1>
+                                    <h1 class="entry-title">
                                         <?php if ($subtitle = trim(get_post_meta(get_the_ID(), '_split_page_subtitle', true))): ?>
                                             <span class="subheader"><?php echo $subtitle; ?></span>
                                         <?php endif; ?>
