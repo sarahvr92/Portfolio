@@ -73,7 +73,6 @@
 
 .header-navigation {
     @include breakpoint(small only) {
-        text-align: center;
         background-color: $secondary-color;
     }
 
@@ -108,6 +107,14 @@
 
         &.current_page_item {
             color: $primary-color;
+        }
+
+        &:first-child:nth-last-child(1),
+        &:first-child:nth-last-child(2),
+        &:first-child:nth-last-child(2) ~ li {
+            @include breakpoint(small only) {
+                flex-grow: 0;
+            }
         }
     }
 
