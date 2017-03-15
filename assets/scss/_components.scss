@@ -29,3 +29,45 @@
         transition: all .25s;
     }
 }
+
+.position-listings {
+    font-size: 0;
+
+    dt, dd {
+        @include responsive-font(1.5vw, 16px, 22px, 18px);
+    }
+
+    dt {
+        @include breakpoint(medium) {
+            display: inline-block;
+            vertical-align: top;
+            width: 35%;
+            padding-right: 5%;
+        }
+
+        b {
+            @include breakpoint(medium) {
+                display: block;
+            }
+        }
+    }
+    dd {
+        margin-bottom: $global-margin;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(medium) {
+            display: inline-block;
+            vertical-align: top;
+            width: 60%;
+        }
+
+        h3 {
+            @include breakpoint(medium) {
+                margin-top: rem-calc(-5);
+            }
+        }
+    }
+}
