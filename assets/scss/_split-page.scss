@@ -1,0 +1,54 @@
+.split-page {
+    position: relative;
+}
+
+.split-page-image-container {
+    height: rem-calc(300);
+    overflow: hidden;
+
+    @include breakpoint(large) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 33%;
+        height: 100%;
+    }
+
+    @include breakpoint(xlarge) {
+        width: 50%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
+
+.split-page-row {
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(50);
+    justify-content: center;
+    align-content: center;
+
+    @include breakpoint(large) {
+        justify-content: flex-end;
+    }
+}
+
+.split-page-content-header {
+    position: relative;
+
+    .subheader {
+        position: relative;
+        //margin-bottom: rem-calc(-12);
+        //z-index: 50;
+    }
+}
+
+.split-page-content {
+    @include breakpoint(large) {
+        padding: rem-calc(0 50);
+    }
+}

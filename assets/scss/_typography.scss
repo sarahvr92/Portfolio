@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
     margin-bottom: 0;
-    line-height: 1;
+    line-height: 0.8;
 }
 
 h2, .h2 {
@@ -69,6 +69,10 @@ blockquote {
 
 ol, ul, dl {
     @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 li {
@@ -92,8 +96,8 @@ dt, dd {
 }
 
 hr {
-    @include responsive-margin(top, 2.8vw, 30px, 45px);
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    @include responsive-margin(top, 8vw, 45px, 60px);
+    @include responsive-margin(bottom, 8vw, 45px, 60px);
 }
 
 pre {
