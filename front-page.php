@@ -21,7 +21,7 @@
                                     </h1>
                                 </header>
 
-                                <section class="entry-content split-page-content" itemprop="articleBody">
+                                <section class="entry-content split-page-content">
                                     <?php the_content(); ?>
                                     <?php wp_link_pages(); ?>
                                 </section>
