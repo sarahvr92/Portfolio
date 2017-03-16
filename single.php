@@ -1,10 +1,10 @@
 <?php get_header(); ?>
     <div id="content">
         <div id="inner-content" class="row">
-            <main id="main" class="large-8 medium-8 columns" role="main">
+            <main id="main" class="large-8 medium-8 columns">
                 <?php if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
-                        <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope
+                        <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> itemscope
                                  itemtype="http://schema.org/BlogPosting">
                             <header class="article-header">
                                 <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>

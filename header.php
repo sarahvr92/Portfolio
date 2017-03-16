@@ -19,7 +19,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta class="foundation-mq">
     <meta name="theme-color" content="#FFFFFF">
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -35,7 +34,7 @@
 
 <div class="off-canvas-wrapper">
     <div class="off-canvas-content" data-off-canvas-content>
-        <header class="header" role="banner">
+        <header class="header">
             <div class="header-sidebar">
                 <div class="header-logo-container">
                     <a href="<?php echo home_url(); ?>" class="header-logo"><?php bloginfo('name'); ?></a>
@@ -45,20 +44,24 @@
                     <?php
                     $social_media = array(
                         'dribbble' => array(
-                            'url' => portfolio_get_option('_theme_dribbble'),
-                            'img' => get_template_directory() . '/assets/images/dribbble.svg'
+                            'title' => 'Dribbble',
+                            'url'   => portfolio_get_option('_theme_dribbble'),
+                            'img'   => get_template_directory() . '/assets/images/dribbble.svg'
                         ),
                         'github'   => array(
-                            'url' => portfolio_get_option('_theme_github'),
-                            'img' => get_template_directory() . '/assets/images/github.svg'
+                            'title' => 'Github',
+                            'url'   => portfolio_get_option('_theme_github'),
+                            'img'   => get_template_directory() . '/assets/images/github.svg'
                         ),
                         'linkedin' => array(
-                            'url' => portfolio_get_option('_theme_linkedin'),
-                            'img' => get_template_directory() . '/assets/images/linkedin.svg'
+                            'title' => 'LinkedIn',
+                            'url'   => portfolio_get_option('_theme_linkedin'),
+                            'img'   => get_template_directory() . '/assets/images/linkedin.svg'
                         ),
                         'twitter'  => array(
-                            'url' => portfolio_get_option('_theme_twitter'),
-                            'img' => get_template_directory() . '/assets/images/twitter.svg'
+                            'title' => 'Twitter',
+                            'url'   => portfolio_get_option('_theme_twitter'),
+                            'img'   => get_template_directory() . '/assets/images/twitter.svg'
                         ),
                     );
 
@@ -67,6 +70,7 @@
                             <li>
                                 <a href="<?php echo $social_profile['url']; ?>" target="_blank">
                                     <?php echo file_get_contents($social_profile['img']); ?>
+                                    <span class="show-for-sr"><?php echo $social_profile['title']; ?></span>
                                 </a>
                             </li>
                         <?php endif;

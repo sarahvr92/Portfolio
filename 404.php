@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div id="content">
         <div id="inner-content" class="inner-content row align-center">
-            <main id="main" class="small-10 align-self-middle column" role="main">
+            <main id="main" class="small-10 align-self-middle column">
                 <article class="text-center">
                     <h1><?php _e('404'); ?></h1>
 

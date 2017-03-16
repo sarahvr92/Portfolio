@@ -1,15 +1,15 @@
 <?php get_header(); ?>
     <div id="content">
         <div id="inner-content">
-            <main id="main" role="main" class="split-page">
+            <main id="main" class="split-page">
                 <?php if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
                         <div class="split-page-image-container">
                             <?php the_post_thumbnail('large'); ?>
                         </div>
 
-                        <article id="post-<?php the_ID(); ?>" <?php post_class('row split-page-row'); ?> role="article"
-                                 itemscope itemtype="http://schema.org/WebPage">
+                        <article id="post-<?php the_ID(); ?>" <?php post_class('row split-page-row'); ?> itemscope
+                                 itemtype="http://schema.org/WebPage">
                             <div class="small-10 large-8 xlarge-6 column">
                                 <header class="split-page-content-header">
                                     <h1 class="entry-title">
