@@ -102,6 +102,9 @@
 
         @include breakpoint(medium) {
             display: inline-block;
+        }
+
+        @include breakpoint(large) {
             color: $secondary-color;
         }
 
