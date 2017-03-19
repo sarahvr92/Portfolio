@@ -84,18 +84,13 @@ li {
     }
 }
 
-dt, dd {
-    //@include responsive-font(1.5vw, 16px, 22px, 18px);
-}
-
 hr {
     margin-top: rem-calc(45);
     margin-bottom: rem-calc(45);
 }
 
 pre {
-    //@include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    margin-bottom: $global-margin;
     padding: rem-calc(15);
-    //@include responsive-font(1.4vw, 15px, 22px, 18px);
     background: $light-gray;
 }
