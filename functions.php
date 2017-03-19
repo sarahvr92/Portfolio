@@ -5,20 +5,26 @@ require_once(get_template_directory() . '/functions/enqueue-scripts.php');
 require_once(get_template_directory() . '/functions/admin.php');
 require_once(get_template_directory() . '/functions/login.php');
 require_once(get_template_directory() . '/functions/theme-options.php');
+require_once(get_template_directory() . '/functions/menu.php');
+require_once(get_template_directory() . '/functions/metaboxes.php');
+require_once(get_template_directory() . '/functions/disable-emoji.php');
 
-require_once(get_template_directory() . '/assets/functions/menu.php');
 require_once(get_template_directory() . '/assets/functions/sidebar.php');
 require_once(get_template_directory() . '/assets/functions/comments.php');
 require_once(get_template_directory() . '/assets/functions/page-navi.php');
 
-// Remove 4.2 Emoji Support
-// require_once(get_template_directory().'/assets/functions/disable-emoji.php');
+add_filter('post_thumbnail_html', 'remove_width_attribute', 10);
+add_filter('image_send_to_editor', 'remove_width_attribute', 10);
 
-// Use this as a template for custom post types
-// require_once(get_template_directory().'/assets/functions/custom-post-type.php');
+function remove_width_attribute($html) {
+    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+    return $html;
+}
 
-// Remove All Yoast HTML Comments
+// Remove All Yoast HTML Comments and JSON Search
 if (defined('WPSEO_VERSION')) {
+    add_filter('disable_wpseo_json_ld_search', '__return_true');
+    
     add_action('get_header', function () {
         ob_start(function ($o) {
             return preg_replace('/\n?<.*?yoast.*?>/mi', '', $o);

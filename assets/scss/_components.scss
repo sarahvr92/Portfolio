@@ -1,6 +1,6 @@
 .flex-video,
 .responsive-embed {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    margin-bottom: $global-margin;
 }
 
 .social-media-list {
@@ -27,5 +27,52 @@
     .svg-icon-path {
         fill: $primary-color;
         transition: all .25s;
+    }
+}
+
+.position-listings {
+    font-size: 0;
+
+    dt, dd {
+        font-size: rem-calc(12);
+
+        @include breakpoint(large) {
+            font-size: $base-font-size;
+        }
+    }
+
+    dt {
+        @include breakpoint(medium) {
+            display: inline-block;
+            vertical-align: top;
+            width: 35%;
+            padding-right: 5%;
+        }
+
+        strong {
+            @include breakpoint(medium) {
+                display: block;
+                margin-top: rem-calc(5);
+            }
+        }
+    }
+    dd {
+        margin-bottom: $global-margin;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(medium) {
+            display: inline-block;
+            vertical-align: top;
+            width: 60%;
+        }
+
+        h3 {
+            @include breakpoint(medium) {
+                margin-top: rem-calc(-5);
+            }
+        }
     }
 }

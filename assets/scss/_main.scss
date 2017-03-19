@@ -5,3 +5,9 @@
 ::selection {
     background-color: lighten($primary-color, 15%);
 }
+
+article {
+    a {
+        text-decoration: underline;
+    }
+}

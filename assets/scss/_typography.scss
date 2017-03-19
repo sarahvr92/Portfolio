@@ -1,15 +1,13 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    @include responsive-margin(bottom, 2.8vw, 15px, 20px);
 }
 
 h1, .h1 {
     margin-bottom: 0;
-    line-height: 1;
+    line-height: 0.8;
 }
 
 h2, .h2 {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
 }
 
 h3, .h3 {
@@ -38,8 +36,9 @@ h6, .h6 {
 
 p,
 p.lead {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
-    @include responsive-font(1.5vw, 16px, 22px, 18px);
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 a {
@@ -48,11 +47,9 @@ a {
 }
 
 blockquote {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
-
     p {
         font-family: Georgia, serif;
-        @include responsive-font(1.8vw, 20px, 26px, 22px);
+        font-size: rem-calc(22);
         font-style: italic;
 
         &:last-child {
@@ -68,37 +65,32 @@ blockquote {
 }
 
 ol, ul, dl {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 li {
-    @include responsive-font(1.5vw, 16px, 22px, 18px);
-
     main & {
-        @include responsive-margin(top, 1.4vw, 16px, 22px);
+        margin-top: rem-calc(16);
 
         &:first-child {
             margin-top: 0;
         }
 
         ol, ul {
-            @include responsive-margin(top, 1.4vw, 16px, 22px);
+            margin-top: rem-calc(16);
         }
     }
 }
 
-dt, dd {
-    @include responsive-font(1.5vw, 16px, 22px, 18px);
-}
-
 hr {
-    @include responsive-margin(top, 2.8vw, 30px, 45px);
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    margin-top: rem-calc(45);
+    margin-bottom: rem-calc(45);
 }
 
 pre {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    margin-bottom: $global-margin;
     padding: rem-calc(15);
-    @include responsive-font(1.4vw, 15px, 22px, 18px);
     background: $light-gray;
 }

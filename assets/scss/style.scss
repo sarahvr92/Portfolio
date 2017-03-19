@@ -48,8 +48,11 @@
 @include foundation-float-classes;
 
 @import "main";
-
 @import "typography";
 
-@import "header";
 @import "components";
+
+@import "header";
+@import "footer";
+@import "split-page";
+@import "404";

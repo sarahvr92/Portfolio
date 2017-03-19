@@ -73,7 +73,6 @@
 
 .header-navigation {
     @include breakpoint(small only) {
-        text-align: center;
         background-color: $secondary-color;
     }
 
@@ -81,6 +80,7 @@
         position: absolute;
         top: rem-calc(65) - rem-calc(10);
         right: rem-calc(65) - rem-calc(10);
+        z-index: 100;
     }
 
     ul {
@@ -102,11 +102,22 @@
 
         @include breakpoint(medium) {
             display: inline-block;
+        }
+
+        @include breakpoint(large) {
             color: $secondary-color;
         }
 
         &.current_page_item {
             color: $primary-color;
+        }
+
+        &:first-child:nth-last-child(1),
+        &:first-child:nth-last-child(2),
+        &:first-child:nth-last-child(2) ~ li {
+            @include breakpoint(small only) {
+                flex-grow: 0;
+            }
         }
     }
 
@@ -116,7 +127,6 @@
         font-size: rem-calc(12);
         line-height: 1.2;
         color: inherit;
-
 
         @include breakpoint(medium) {
             font-size: rem-calc(13);
