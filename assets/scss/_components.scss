@@ -1,6 +1,6 @@
 .flex-video,
 .responsive-embed {
-    @include responsive-margin(bottom, 2.8vw, 30px, 45px);
+    margin-bottom: $global-margin;
 }
 
 .social-media-list {
@@ -34,7 +34,11 @@
     font-size: 0;
 
     dt, dd {
-        @include responsive-font(1.5vw, 16px, 22px, 18px);
+        font-size: rem-calc(12);
+
+        @include breakpoint(large) {
+            font-size: $base-font-size;
+        }
     }
 
     dt {
@@ -45,9 +49,10 @@
             padding-right: 5%;
         }
 
-        b {
+        strong {
             @include breakpoint(medium) {
                 display: block;
+                margin-top: rem-calc(5);
             }
         }
     }
